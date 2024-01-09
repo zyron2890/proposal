@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Invitation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #response {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hey Neha Chaudhary,</h1>
+    <p>Would you like to go on a date with me?</p>
+    <button onclick="respond('Yes')">Yes, I'd love to!</button>
+    <button onclick="respond('No')">Sorry, not this time.</button>
+
+    <div id="response"></div>
+
+    <script>
+        function respond(answer) {
+            var responseContainer = document.getElementById('response');
+            
+            if (answer === 'Yes') {
+                responseContainer.innerHTML = "<p>Yay! <img src='https://hindijaankaari.in/wp-content/uploads/2022/02/Girl-proposing-boy-gif.gif' alt='Heart'></p>";
+            } else if (answer === 'No') {
+                responseContainer.innerHTML = "<p>Oh no, my heart is breaking! 💔</p>";
+            }
+        }
+    </script>
+</body>
+</html>
